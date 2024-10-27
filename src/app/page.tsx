@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { todoType, useTodos } from "./store/todos";
+import {  useTodos } from "./store/todos";
+import Image from 'next/image'
 
 
 
@@ -58,10 +59,16 @@ return(
                               <h1 className={item.isDone ? "line-through" : ""}>{item.todo}</h1>
                             </div>
                             
-                             <img className="h-6 hover:scale-105" src="https://thumbs.dreamstime.com/b/computer-generated-illustration-recycle-bin-icon-isolated-white-background-suitable-logo-delete-icon-button-175612353.jpg" alt=""  onClick={()=>{
-                                 deleteTodos(item.id)
-                             }} />
-                                
+                
+ 
+     <Image onClick={()=> deleteTodos(item.id)}
+       src="https://thumbs.dreamstime.com/b/computer-generated-illustration-recycle-bin-icon-isolated-white-background-suitable-logo-delete-icon-button-175612353.jpg"
+       width={30}
+       height={50}
+       alt="Picture of the author"
+     />
+   
+ 
 
                             </div>    
                            
