@@ -39,9 +39,7 @@ import { devtools,persist } from "zustand/middleware";
 
         deleteTodo : (id:number)=> set((state)=> ({
                     
-          todos: state.todos.filter((del)=>{
-                 del.id !== id
-          })
+          todos: state.todos.filter((del)=>del.id !== id)
         }))
   
 
